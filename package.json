@@ -1,0 +1,48 @@
+{
+  "name": "fitness-libraries",
+  "version": "0.1.0",
+  "description": "Fitness libraries as inversify modules.",
+  "main": "src/index.js",
+  "author": "Michal Ozogán <michal@ozogan.eu>",
+  "license": "Apache-2.0",
+  "keywords": [
+    "personal",
+    "syncing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fabulator/fitness-libraries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabulator/fitness-libraries/issues"
+  },
+  "homepage": "https://github.com/fabulator/fitness-libraries",
+  "scripts": {
+    "lint": "eslint --ext .ts ./src ./tests",
+    "lint:export": "npm run lint -- -o ./tests_results/checkstyle/js-checkstyle.xml -f checkstyle",
+    "tsc": "tsc --noEmit",
+    "test": "jest",
+    "build": "tsc",
+    "test:build": "npm run test -- --config jest.config.build.js",
+    "test:all": "npm run lint && npm run tsc && npm run test",
+    "prepublishOnly": "npm run build && npm run tsc && npm run test:build"
+  },
+  "devDependencies": {
+    "@socifi/eslint-config": "^2.5.0",
+    "@socifi/jest-config": "^2.2.0",
+    "@socifi/rollup-config": "^2.0.1",
+    "@types/jest": "^23.3.10",
+    "@types/luxon": "^1.4.1",
+    "@types/mathjs": "^4.4.3",
+    "cross-fetch": "^2.2.3",
+    "ts-jest": "^23.10.5"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.12",
+    "endomondo-api-handler": "^3.0.0-beta.1",
+    "garmin-api-handler": "^0.1.0",
+    "inversify": "^5.0.1",
+    "luxon": "^1.8.2",
+    "storage-keeper": "^2.0.0"
+  }
+}
