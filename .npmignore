@@ -14,3 +14,4 @@ jest.config.build.js
 .browserslistrc
 tsconfig.json
 .eslintignore
+fs
