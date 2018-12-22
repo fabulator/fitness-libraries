@@ -27,7 +27,8 @@
     "develop": "tsc --watch",
     "test:build": "npm run test -- --config jest.config.build.js",
     "test:all": "npm run lint && npm run tsc && npm run test",
-    "prepublishOnly": "npm run build && npm run test:build"
+    "prepublishOnly": "npm run build && npm run test:build",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@socifi/commitlint-config": "^1.0.0",
