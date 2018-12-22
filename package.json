@@ -1,6 +1,6 @@
 {
   "name": "fitness-libraries",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fitness libraries as inversify modules.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,11 +24,13 @@
     "tsc": "tsc --noEmit",
     "test": "jest",
     "build": "tsc",
+    "develop": "tsc --watch",
     "test:build": "npm run test -- --config jest.config.build.js",
     "test:all": "npm run lint && npm run tsc && npm run test",
-    "prepublishOnly": "npm run build && npm run tsc && npm run test:build"
+    "prepublishOnly": "npm run build && npm run test:build"
   },
   "devDependencies": {
+    "@socifi/commitlint-config": "^1.0.0",
     "@socifi/eslint-config": "^2.5.0",
     "@socifi/jest-config": "^2.2.0",
     "@socifi/rollup-config": "^2.0.1",
@@ -36,14 +38,17 @@
     "@types/luxon": "^1.4.1",
     "@types/mathjs": "^4.4.3",
     "cross-fetch": "^2.2.3",
+    "husky": "^1.2.1",
+    "semantic-release-config-fabulator": "^1.0.3",
     "ts-jest": "^23.10.5"
   },
   "dependencies": {
-    "reflect-metadata": "^0.1.12",
-    "endomondo-api-handler": "^3.0.0-beta.1",
-    "garmin-api-handler": "^0.1.0",
+    "endomondo-api-handler": "^2.1.0-beta.1",
+    "fitbit-api-handler": "^2.1.0-beta.1",
+    "garmin-api-handler": "^0.1.2",
     "inversify": "^5.0.1",
     "luxon": "^1.8.2",
+    "reflect-metadata": "^0.1.12",
     "storage-keeper": "^2.0.0"
   }
 }

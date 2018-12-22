@@ -12,6 +12,14 @@ class EndomondoService {
         @inject(MobileApi) public mobileApi: MobileApi,
     ) {}
 
+    public getApi() {
+        return this.api;
+    }
+
+    public getMobileApi() {
+        return this.mobileApi;
+    }
+
     public async getWorkout(id: number) {
         return this.api.getWorkout(id);
     }
@@ -25,8 +33,22 @@ class EndomondoService {
         return this.api.processWorkouts(...args);
     }
 
+    public async editWorkout(workout: Workout) {
+        return this.api.editWorkout(workout);
+    }
+
     public async createWorkout(workout: Workout) {
-        return this.mobileApi.createWorkout(workout);
+        const newWorkoutId = await this.mobileApi.createWorkout(workout);
+
+        const newWorkout = workout.setId(newWorkoutId);
+
+        newWorkout.getHashtags().forEach((hashtag) => {
+            this.api.addHashtag(hashtag, newWorkoutId);
+        });
+
+        await this.api.editWorkout(newWorkout);
+
+        return newWorkoutId;
     }
 
     public async getProfile() {

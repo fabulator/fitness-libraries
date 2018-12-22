@@ -8,6 +8,10 @@ class GarminService {
     ) {
     }
 
+    public getApi() {
+        return this.api;
+    }
+
     public async getActivity(id: number): Promise<Activity> {
         return this.api.getActivity(id);
     }
