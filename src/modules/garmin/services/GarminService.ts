@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify';
 import { Activity, GarminApi, TYPES } from 'garmin-api-handler';
 
 @injectable()
-class GarminService {
+export default class GarminService {
     public constructor(
         @inject(GarminApi) protected api: GarminApi,
     ) {
@@ -37,5 +37,3 @@ class GarminService {
         return this.api.addGear(activityId, gear);
     }
 }
-
-export default GarminService;
