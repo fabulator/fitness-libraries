@@ -30,7 +30,11 @@ class GarminHandler extends GarminApi {
     }
 
     public async request(...parameters: ArgumentsType<typeof GarminApi.prototype.request>) {
-        if (parameters[0].includes('sso/login') || parameters[0].includes('ticket')) {
+        if (
+            parameters[0].includes('sso/login')
+            || parameters[0].includes('ticket')
+            || parameters[0] === 'https://connect.garmin.com/modern/'
+        ) {
             return super.request(...parameters);
         }
 

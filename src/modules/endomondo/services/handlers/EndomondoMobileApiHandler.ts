@@ -56,7 +56,7 @@ class EndomondoMobileApiHandler extends MobileApi {
             return;
         }
 
-        this.login();
+        await this.login();
     }
 
     @reauth()

@@ -44,7 +44,7 @@
     "ts-jest": "^23.10.5"
   },
   "dependencies": {
-    "endomondo-api-handler": "^2.1.0-beta.2",
+    "endomondo-api-handler": "^2.1.0-beta.3",
     "fitbit-api-handler": "^2.1.0-beta.1",
     "garmin-api-handler": "^0.1.2",
     "inversify": "^5.0.1",
