@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] 2019-01-15
+### Changed
+- Update libraries
+
 ## [0.3.1] 2018-12-27
 ### Merge branch 'master' of github.com
 - fabulator/fitness-libraries

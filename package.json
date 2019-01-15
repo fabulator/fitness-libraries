@@ -1,6 +1,6 @@
 {
   "name": "fitness-libraries",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Fitness libraries as inversify modules.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
