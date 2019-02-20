@@ -36,13 +36,14 @@
     "@socifi/jest-config": "^2.2.0",
     "@socifi/rollup-config": "^2.0.1",
     "@types/jest": "^23.3.10",
-    "@types/luxon": "^1.11.1",
+    "@types/mathjs": "^4.4.3",
     "cross-fetch": "^2.2.3",
     "husky": "^1.2.1",
     "semantic-release-config-fabulator": "^1.0.3",
     "ts-jest": "^23.10.5"
   },
   "dependencies": {
+    "@types/luxon": "^1.11.1",
     "endomondo-api-handler": "^2.1.0-beta.5",
     "fitbit-api-handler": "^2.1.0-beta.2",
     "garmin-api-handler": "^0.1.3",
