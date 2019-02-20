@@ -22,7 +22,7 @@ export default class StravaService {
         return this.api;
     }
 
-    public getLoginUrl(scopes: Array<string>) {
+    public getLoginUrl(scopes: string[]) {
         // @ts-ignore
         return this.api.getLoginUrl(this.returnUrl, scopes);
     }
@@ -69,13 +69,13 @@ export default class StravaService {
         return uploadedActivity;
     }
 
-    public async getActivityPoint(activity: Activity<number>): Promise<Array<{
+    public async getActivityPoint(activity: Activity<number>): Promise<{
         lat: number,
         lon: number,
         time: Date,
         cadence: number,
         hr: number,
-    }>> {
+    }[]> {
         // @ts-ignore
         const points = await this.api.getStream(activity.getId(), [
             Api.STREAM.HEARTRATE,

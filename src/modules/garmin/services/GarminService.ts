@@ -16,7 +16,7 @@ export default class GarminService {
         return this.api.getActivity(id);
     }
 
-    public async getActivities(filters: TYPES.ActivityFilters = {}): Promise<Array<Activity>> {
+    public async getActivities(filters: TYPES.ActivityFilters = {}): Promise<Activity[]> {
         return this.api.getActivities(filters);
     }
 

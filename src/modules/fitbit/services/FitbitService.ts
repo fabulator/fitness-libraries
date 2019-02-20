@@ -37,7 +37,7 @@ export default class FitbitService {
         this.storage.storeToken(token);
     }
 
-    public async getProfile(): Promise<Object> {
+    public async getProfile(): Promise<Record<string, any>> {
         const { data } = await this.fitbitApi.get(this.fitbitApi.getApiUrl('profile'));
         return data;
     }
@@ -51,7 +51,7 @@ export default class FitbitService {
         return data;
     }
 
-    public async getActivities(filters: TYPES.ActivityFilters): Promise<Array<Activity>> {
+    public async getActivities(filters: TYPES.ActivityFilters): Promise<Activity[]> {
         const { activities } = await this.fitbitApi.getActivities(filters);
         return activities;
     }

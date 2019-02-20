@@ -2,15 +2,21 @@ module.exports = {
     extends: [
         '@socifi',
     ],
-    plugins: [
-        'typescript', // fix for Webstorm, otherwise it does not parse ts files
-    ],
     rules: {
         'camelcase': 0,
-        'typescript/no-parameter-properties': 0,
         'no-useless-constructor': 0,
-        'no-shadow': 0,
+        '@typescript-eslint/no-parameter-properties': 0,
+        '@typescript-eslint/camelcase': 0,
         'no-param-reassign': 0,
-        'func-names': 0,
+        '@typescript-eslint/member-delimiter-style': [2, {
+            multiline: {
+                delimiter: 'comma',
+                requireLast: true,
+            },
+            singleline: {
+                delimiter: 'comma',
+                requireLast: false,
+            },
+        }],
     },
 };
