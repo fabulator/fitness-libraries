@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.5.0] 2019-02-20
+### Fixed
+- aaaaaaaaaaaaaargh
+- Eslint rules
+- Types
+
+### Added
+- Handling extended token
+
 ## [0.4.0] 2019-01-15
 ### Changed
 - Update libraries
