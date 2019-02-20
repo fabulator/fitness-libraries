@@ -1,4 +1,5 @@
 import { inject, injectable, named } from 'inversify';
+import { DateTime } from 'luxon';
 import { Api } from 'strava-api-handler';
 import StravaStorageService from './StravaStorageService';
 import { SYMBOLS } from '../constants';
@@ -26,7 +27,12 @@ export default class StravaApiHandler extends Api {
             return super.request(...parameters);
         }
 
-        this.setAccessToken(token);
+        this.setAccessToken(token.access_token);
+
+        if (DateTime.local().toSeconds() >= token.expires_at) {
+            const refreshedToken = await this.refreshToken(token.refresh_token);
+            this.storage.store(refreshedToken);
+        }
 
         return super.request(...parameters);
     }

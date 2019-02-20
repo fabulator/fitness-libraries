@@ -27,9 +27,9 @@ export default class StravaService {
         return this.api.getLoginUrl(this.returnUrl, scopes);
     }
 
-    public async authorize(code: string) {
+    public async authorize(code: string): Promise<{ access_token: string }> {
         const token = await this.api.requestAccessToken(code);
-        this.storage.store(token.access_token);
+        this.storage.store(token);
         return token;
     }
 
