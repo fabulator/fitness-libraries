@@ -44,7 +44,7 @@
     "@types/luxon": "^1.11.1",
     "endomondo-api-handler": "^3.1.0",
     "fitbit-api-handler": "^3.1.0",
-    "garmin-api-handler": "^0.2.0",
+    "garmin-api-handler": "^0.2.1",
     "inversify": "^5.0.1",
     "luxon": "^1.12.0",
     "reflect-metadata": "^0.1.13",
