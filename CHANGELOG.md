@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] 2019-04-24
+### Changed
+- Update garmin dependency
+
 ## [0.7.0] 2019-03-29
 ### Changed
 - Updated packages
