@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.10.0] 2019-10-24
+### Changed
+- [2117f4d](https://github.com/fabulator/fitness-libraries/commit/2117f4d68c171ba876080b6e70a15f8acf4f0480) Update dev dependency @socifi/rollup-config to ^2.2.2
+- [fd90406](https://github.com/fabulator/fitness-libraries/commit/fd9040640a7677daedf735cfa1b8b167246c7e09) Update dev dependency ts-jest to v24 
+
 ## [0.9.0] 2019-10-24
 ### Changed
 - [91e9830](https://github.com/fabulator/fitness-libraries/commit/91e9830826b8d1235905e03155a6ff81b570b668) Update libraries.
