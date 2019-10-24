@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] 2019-10-24
+### Changed
+- [91e9830](https://github.com/fabulator/fitness-libraries/commit/91e9830826b8d1235905e03155a6ff81b570b668) Update libraries.
+
 ## [0.8.0] 2019-04-24
 ### Changed
 - Update garmin dependency
