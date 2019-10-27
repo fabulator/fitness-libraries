@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.11.0] 2019-10-27
+### Changed
+- [78f6d1b](https://github.com/fabulator/fitness-libraries/commit/78f6d1b0dfd0630b2514a2f7f903bc48ba1ea0d3) Update dependency endomondo-api-handler to ^3.3.0
+
 ## [0.10.0] 2019-10-24
 ### Changed
 - [2117f4d](https://github.com/fabulator/fitness-libraries/commit/2117f4d68c171ba876080b6e70a15f8acf4f0480) Update dev dependency @socifi/rollup-config to ^2.2.2
