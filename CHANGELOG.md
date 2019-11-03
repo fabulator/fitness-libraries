@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.15.0] 2019-11-03
+### Changed
+- [25661f0](https://github.com/fabulator/fitness-libraries/commit/25661f01c7a4e3f5159982b04d7e6fdcf95dc7fd) Update libraries.
+
 ## [0.14.0] 2019-11-02
 ### Changed
 - [0068d4b](https://github.com/fabulator/fitness-libraries/commit/0068d4bcfa9b810095f21f7b2325b1e56f712245) Update dependency luxon to ^1.21.0
