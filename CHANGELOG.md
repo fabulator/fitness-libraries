@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.16.0] 2019-11-06
+### Changed
+- [c47303b](https://github.com/fabulator/fitness-libraries/commit/c47303bfd97bdaab9a8d8b2821ec812da8029758) Update packages.
+
 ## [0.15.0] 2019-11-03
 ### Changed
 - [25661f0](https://github.com/fabulator/fitness-libraries/commit/25661f01c7a4e3f5159982b04d7e6fdcf95dc7fd) Update libraries.
