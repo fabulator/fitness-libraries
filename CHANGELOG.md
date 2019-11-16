@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.31.0] 2019-11-16
+### Changed
+- [f656a6e](https://github.com/fabulator/fitness-libraries/commit/f656a6e3062b82a4cbe2d5ccae3a5e5ebc8b05c2) Update dependency @types/luxon to v1.21.0
+
 ## [0.30.0] 2019-11-15
 ### Changed
 - [6348e10](https://github.com/fabulator/fitness-libraries/commit/6348e102b49c781c7c642013d4eff8e112038224) Update dependency endomondo-api-handler to v3.15.0
