@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.38.0] 2019-11-20
+### Changed
+- [026330b](https://github.com/fabulator/fitness-libraries/commit/026330b350b88e77301c62ac38750a9fa4e0887f) Update dependency fitbit-api-handler to v3.16.0
+
 ## [0.37.0] 2019-11-19
 ### Changed
 - [7f774dd](https://github.com/fabulator/fitness-libraries/commit/7f774dd67c4bddfa89af9f5c724ec0620c7bd990) Update dependency luxon to v1.21.2
