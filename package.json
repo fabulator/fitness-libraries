@@ -37,17 +37,17 @@
     "@socifi/rollup-config": "^2.2.2",
     "cross-fetch": "^3.0.4",
     "semantic-release-config-fabulator": "^1.3.2",
-    "ts-jest": "^24.1.0"
+    "ts-jest": "^24.2.0"
   },
   "dependencies": {
-    "@types/luxon": "^1.15.2",
-    "endomondo-api-handler": "^3.14.0",
-    "fitbit-api-handler": "^3.11.0",
-    "garmin-api-handler": "^1.0.0",
+    "@types/luxon": "^1.21.0",
+    "endomondo-api-handler": "^3.25.0",
+    "fitbit-api-handler": "^3.22.0",
+    "garmin-api-handler": "^1.11.1",
     "inversify": "^5.0.1",
-    "luxon": "^1.21.1",
+    "luxon": "^1.21.3",
     "reflect-metadata": "^0.1.13",
     "storage-keeper": "^2.2.0",
-    "strava-api-handler": "^1.0.0"
+    "strava-api-handler": "^1.10.0"
   }
 }
