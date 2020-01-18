@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.94.0] 2020-01-18
+### Changed
+- [be0d85a](https://github.com/fabulator/fitness-libraries/commit/be0d85a9549ab0f2ed2846aecdb99372eb0a0c31) Update dependency garmin-api-handler to v1.27.0
+
 ## [0.93.0] 2020-01-18
 ### Changed
 - [5d56a0f](https://github.com/fabulator/fitness-libraries/commit/5d56a0f44f888a3560f3765346c6309a1e1a42e4) Update dependency endomondo-api-handler to v3.41.0
