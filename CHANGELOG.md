@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.111.0] 2020-02-02
+### Changed
+- [6714bf3](https://github.com/fabulator/fitness-libraries/commit/6714bf36785e8f285d7b97aab428c2bc28b3646c) Update dependency garmin-api-handler to v1.32.0
+- [c2b19a9](https://github.com/fabulator/fitness-libraries/commit/c2b19a95ae4f462053e7dab10b10ca11fe6d5093) Update dev dependency ts-jest to v25.1.0 
+
 ## [0.110.0] 2020-01-29
 ### Changed
 - [5e7b056](https://github.com/fabulator/fitness-libraries/commit/5e7b056694a4c31b4c6f131dfc076eb412540f53) Update dependency garmin-api-handler to v1.31.0
