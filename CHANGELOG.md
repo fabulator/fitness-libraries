@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.116.0] 2020-02-04
+### Changed
+- [ef8405e](https://github.com/fabulator/fitness-libraries/commit/ef8405ede73e78f7df1f1f01c495a8ab13b9d2a5) Update dependency garmin-api-handler to v1.35.0
+
 ## [0.115.0] 2020-02-04
 ### Changed
 - [5c89a8c](https://github.com/fabulator/fitness-libraries/commit/5c89a8c80d9ab685e8c4fa318e8f9b09906f153d) Update dependency fitbit-api-handler to v3.41.0
