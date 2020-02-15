@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.118.0] 2020-02-15
+### Changed
+- [ed8468f](https://github.com/fabulator/fitness-libraries/commit/ed8468f414bbb116a7e3e4eee6f1b3a4519da408) Update dependency fitbit-api-handler to v3.42.0
+- [ae67a48](https://github.com/fabulator/fitness-libraries/commit/ae67a4809c9da175118c29cdab3fe80cf0a56ad7) Update dev dependency ts-jest to v25.2.0 
+
 ## [0.117.0] 2020-02-05
 ### Changed
 - [77efe02](https://github.com/fabulator/fitness-libraries/commit/77efe02a925a39ccf45060c6101a76a21968583c) Update dependency strava-api-handler to v1.28.0
