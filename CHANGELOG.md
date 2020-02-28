@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.120.0] 2020-02-28
+### Changed
+- [68e5845](https://github.com/fabulator/fitness-libraries/commit/68e5845cab6529d1ca8929f7feed33bf7689452b) Update dependency endomondo-api-handler to v3.53.0
+- [21cb46f](https://github.com/fabulator/fitness-libraries/commit/21cb46f62ee8510eb4a77b94618834c87d5b5acd) Update dev dependency @socifi/eslint-config to v2.10.2 
+- [2d79276](https://github.com/fabulator/fitness-libraries/commit/2d7927696327ad6cedbd0ba46fc39bc1c747cdbb) Update dev dependency ts-jest to v25.2.1 
+
 ## [0.119.0] 2020-02-15
 ### Changed
 - [a23c136](https://github.com/fabulator/fitness-libraries/commit/a23c1367359a727a4f2aaccdf6a279bf5f922a64) Update dependency endomondo-api-handler to v3.52.0
