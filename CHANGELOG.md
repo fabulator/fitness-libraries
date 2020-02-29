@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.124.0] 2020-02-29
+### Changed
+- [d86a7fc](https://github.com/fabulator/fitness-libraries/commit/d86a7fc88ce011dc389acc329181e062e8213568) Update dependency fitbit-api-handler to v3.44.0
+
 ## [0.123.0] 2020-02-29
 ### Changed
 - [4aad585](https://github.com/fabulator/fitness-libraries/commit/4aad5857bfa867b45a2e7a597186c485abdd88b6) Update dependency endomondo-api-handler to v3.54.0
