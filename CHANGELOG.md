@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.137.0] 2020-03-26
+### Changed
+- [20bd807](https://github.com/fabulator/fitness-libraries/commit/20bd8079e6c21e2bf312c15407f2be32758cfd36) Update dependency luxon to v1.22.2
+
 ## [0.136.0] 2020-03-26
 ### Changed
 - [8b3d611](https://github.com/fabulator/fitness-libraries/commit/8b3d611194dcd0a55f46842f32be9de13889bf6d) Update dependency strava-api-handler to v1.35.0
