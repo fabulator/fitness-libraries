@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.140.0] 2020-03-29
+### Changed
+- [416221b](https://github.com/fabulator/fitness-libraries/commit/416221b04ae547c3ceaf9fd0ad92993d0991c78a) Update dependency endomondo-api-handler to v3.66.0
+
 ## [0.139.0] 2020-03-29
 ### Changed
 - [c429336](https://github.com/fabulator/fitness-libraries/commit/c429336dccb0f4661a41605c9f7ca2e3d02126d4) Update dependency strava-api-handler to v1.37.0
