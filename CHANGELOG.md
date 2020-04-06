@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.148.0] 2020-04-06
+### Changed
+- [2327db5](https://github.com/fabulator/fitness-libraries/commit/2327db5163ba8124fb42f38a54ee57bdb99856f8) Update dependency endomondo-api-handler to v3.71.0
+- [d1a05e9](https://github.com/fabulator/fitness-libraries/commit/d1a05e9b98beeca9ed09ea7e681465db0bc69683) Update dev dependency ts-jest to v25.3.1 
+
 ## [0.147.0] 2020-04-04
 ### Changed
 - [c5f9f25](https://github.com/fabulator/fitness-libraries/commit/c5f9f259552afc44fbe33cc9273addacacd61a99) Update dependency luxon to v1.23.0
