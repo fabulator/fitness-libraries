@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.156.0] 2020-04-15
+### Changed
+- [30dfdc6](https://github.com/fabulator/fitness-libraries/commit/30dfdc6c1fc706e6851deac904859f87ccf6e651) Update dependency fitbit-api-handler to v3.61.0
+
 ## [0.155.0] 2020-04-15
 ### Changed
 - [237d6b1](https://github.com/fabulator/fitness-libraries/commit/237d6b12bf224f5bb1e14b460c8584b1a6a07857) Update dependency strava-api-handler to v1.44.0
