@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] 2020-05-17
+### Changed
+- [6083c8b](https://github.com/fabulator/fitness-libraries/commit/6083c8b43907c739de5d34e25df3284f1626de78) Implement async storages BREAKING
+
 ## [0.180.0] 2020-05-17
 ### Changed
 - [111ccd1](https://github.com/fabulator/fitness-libraries/commit/111ccd17b129631cf2c7f2e59e6ddd7b861766b7) Update dependency garmin-api-handler to v1.45.0
