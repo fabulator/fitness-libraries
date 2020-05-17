@@ -7,25 +7,35 @@ type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
 
 @injectable()
 class GarminHandler extends GarminApi {
+    private init?: boolean;
+
     public constructor(
         @inject(GarminStorageService) public storage: GarminStorageService,
         @inject(SYMBOLS.env) @named(SYMBOLS.login) public email: string,
         @inject(SYMBOLS.env) @named(SYMBOLS.password) public password: string,
     ) {
         super();
+    }
 
-        const session = this.storage.get();
+    private async sessionIni() {
+        if (this.init) {
+            return;
+        }
+
+        const session = await this.storage.get();
 
         if (!session) {
             return;
         }
 
         this.setSession(session);
+
+        this.init = true;
     }
 
     public async login(email: string = this.email, password: string = this.password) {
         const response = await super.login(email, password);
-        this.storage.store(response);
+        await this.storage.store(response);
         return response;
     }
 
@@ -37,6 +47,8 @@ class GarminHandler extends GarminApi {
         ) {
             return super.request(...parameters);
         }
+
+        await this.sessionIni();
 
         if (!this.getSession()) {
             await this.login();

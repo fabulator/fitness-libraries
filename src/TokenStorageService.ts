@@ -9,16 +9,15 @@ export default class TokenStorageService<Token = string> {
     ) {
     }
 
-    public store(token: Token) {
-        this.storage.set(this.storageName, token);
+    public async store(token: Token) {
+        return this.storage.set(this.storageName, token);
     }
 
-    public get(): Token | null {
-        // @ts-ignore
-        return this.storage.get(this.storageName);
+    public async get() {
+        return this.storage.get(this.storageName) as unknown as Token | null;
     }
 
-    public delete() {
-        this.storage.remove(this.storageName);
+    public async delete() {
+        return this.storage.remove(this.storageName);
     }
 }

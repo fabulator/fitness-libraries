@@ -21,7 +21,7 @@ export default class StravaApiHandler extends Api {
             return super.request(...parameters);
         }
 
-        const token = this.storage.get();
+        const token = await this.storage.get();
 
         if (!token) {
             return super.request(...parameters);

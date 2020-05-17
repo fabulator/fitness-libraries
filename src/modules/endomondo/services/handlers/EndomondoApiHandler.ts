@@ -7,14 +7,22 @@ type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
 
 @injectable()
 class EndomondoApiHandler extends EndomondoApi {
+    private init?: boolean;
+
     public constructor(
         @inject(SYMBOLS.apiStorage) public storage: EndomondoApiStorageService,
         @inject(SYMBOLS.env) @named(SYMBOLS.login) public email: string,
         @inject(SYMBOLS.env) @named(SYMBOLS.password) public password: string,
     ) {
         super();
+    }
 
-        const session = this.storage.get();
+    private async sessionIni() {
+        if (this.init) {
+            return;
+        }
+
+        const session = await this.storage.get();
 
         if (!session) {
             return;
@@ -26,6 +34,8 @@ class EndomondoApiHandler extends EndomondoApi {
             this.setUserToken(token);
             this.setUserId(id);
         }
+
+        this.init = true;
     }
 
     public async getUserApiUrl(namespace: string, userId?: number) {
@@ -40,6 +50,8 @@ class EndomondoApiHandler extends EndomondoApi {
         if (parameters[0].includes('rest/session')) {
             return super.request(...parameters);
         }
+
+        await this.sessionIni();
 
         if (!this.getUserId()) {
             await this.login();

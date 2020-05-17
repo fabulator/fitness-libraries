@@ -30,14 +30,22 @@ function reauth(): any {
 
 @injectable()
 class EndomondoMobileApiHandler extends MobileApi {
+    private init?: boolean;
+
     public constructor(
         @inject(SYMBOLS.mobileApiStorage) public storage: EndomondoMobileApiStorageService,
         @inject(SYMBOLS.env) @named(SYMBOLS.login) public email: string,
         @inject(SYMBOLS.env) @named(SYMBOLS.password) public password: string,
     ) {
         super();
+    }
 
-        const session = this.storage.get();
+    private async sessionIni() {
+        if (this.init) {
+            return;
+        }
+
+        const session = await this.storage.get();
 
         if (!session) {
             return;
@@ -49,9 +57,13 @@ class EndomondoMobileApiHandler extends MobileApi {
             this.setUserToken(token);
             this.setUserId(id);
         }
+
+        this.init = true;
     }
 
     protected async auth() {
+        await this.sessionIni();
+
         if (this.getUserToken()) {
             return;
         }
