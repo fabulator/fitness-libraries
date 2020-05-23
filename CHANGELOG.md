@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] 2020-05-23
+### Fixed
+- [01d62ca](https://github.com/fabulator/fitness-libraries/commit/01d62ca6e5680c18a2bb6fa52756d41d1d6e0c98) Handling async storage
+
 ## [1.1.0] 2020-05-18
 ### Changed
 - [5fa68b0](https://github.com/fabulator/fitness-libraries/commit/5fa68b0f305a0caa621155a86cad062ed66265af) Update dependency storage-keeper to v3.1.0
