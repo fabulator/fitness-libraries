@@ -21,7 +21,7 @@ export default class FitbitApiHandler extends FitbitApi {
             return super.request(...parameters);
         }
 
-        const token = this.storage.getToken();
+        const token = await this.storage.getToken();
 
         if (!token) {
             return super.request(...parameters);
@@ -36,11 +36,11 @@ export default class FitbitApiHandler extends FitbitApi {
 
         try {
             const refreshedToken = await this.extendAccessToken(refresh_token);
-            this.storage.storeToken(refreshedToken);
+            await this.storage.storeToken(refreshedToken);
             return super.request(...parameters);
         } catch (exception) {
             if (exception instanceof FitbitApiException && exception.hasError('invalid_grant')) {
-                this.storage.deleteToken();
+                await this.storage.deleteToken();
             }
             throw exception;
         }

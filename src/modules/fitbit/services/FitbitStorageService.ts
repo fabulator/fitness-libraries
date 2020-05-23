@@ -11,15 +11,14 @@ export default class FitbitStorageService {
     ) {}
 
     public storeToken(token: TYPES.ApiToken) {
-        this.storage.set(this.storageName, token);
+        return this.storage.set(this.storageName, token);
     }
 
-    public getToken(): TYPES.ApiToken | null {
-        // @ts-ignore
-        return this.storage.get(this.storageName);
+    public getToken() {
+        return this.storage.get(this.storageName) as Promise<TYPES.ApiToken | null>;
     }
 
     public deleteToken() {
-        this.storage.set(this.storageName, null);
+        return this.storage.set(this.storageName, null);
     }
 }
