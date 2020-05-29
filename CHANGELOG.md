@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] 2020-05-29
+### Changed
+- [dfdcacc](https://github.com/fabulator/fitness-libraries/commit/dfdcacc07097d399336cde3fc77545b75e0198a0) Update dependency garmin-api-handler to v3 BREAKING (#200)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
 ## [1.1.1] 2020-05-23
 ### Fixed
 - [01d62ca](https://github.com/fabulator/fitness-libraries/commit/01d62ca6e5680c18a2bb6fa52756d41d1d6e0c98) Handling async storage
