@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [3.0.0] 2020-05-29
+### Changed
+- [765c1e2](https://github.com/fabulator/fitness-libraries/commit/765c1e2fd485a88abf13b25a8a30aa5b36539c93) Update dependency fitbit-api-handler to v5 BREAKING (#199)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+- [f44fded](https://github.com/fabulator/fitness-libraries/commit/f44fded3c5c72991a882f86d1ba2d96e2dfaeb2f) Update dependency strava-api-handler to v3 BREAKING (#201)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
 ## [2.0.0] 2020-05-29
 ### Changed
 - [dfdcacc](https://github.com/fabulator/fitness-libraries/commit/dfdcacc07097d399336cde3fc77545b75e0198a0) Update dependency garmin-api-handler to v3 BREAKING (#200)
