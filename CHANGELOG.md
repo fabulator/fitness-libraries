@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [4.3.0] 2020-06-01
+### Changed
+- [4243f51](https://github.com/fabulator/fitness-libraries/commit/4243f519dce0f47f0ae0c16ea9f66d1fef05450c) Update dependency endomondo-api-handler to v6.5.0
+- [69c682b](https://github.com/fabulator/fitness-libraries/commit/69c682b5f715810a342c65943bdf622428e4d73c) Update dev dependency ts-jest to v26.1.0 
+
 ## [4.2.0] 2020-05-31
 ### Changed
 - [71f89f1](https://github.com/fabulator/fitness-libraries/commit/71f89f149a7716851e4985b9a1b2ec1dc0d2caac) Update dependency fitbit-api-handler to v5.1.0
