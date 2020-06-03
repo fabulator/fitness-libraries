@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [4.6.0] 2020-06-03
+### Changed
+- [376fdef](https://github.com/fabulator/fitness-libraries/commit/376fdef3651fe9a27b9652f268b61ec03247e972) Update dependency fitbit-api-handler to v5.4.0
+
 ## [4.5.0] 2020-06-02
 ### Changed
 - [08725f6](https://github.com/fabulator/fitness-libraries/commit/08725f6852eb298e309e98b4ddcc9177e488d60d) Update dependency storage-keeper to v3.3.0
