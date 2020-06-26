@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [4.22.0] 2020-06-26
+### Changed
+- [671e313](https://github.com/fabulator/fitness-libraries/commit/671e31371eff93cda1de9d1c0a36a643fd2adb02) Update dependency garmin-api-handler to v3.13.0
+
 ## [4.21.0] 2020-06-25
 ### Changed
 - [ba8c543](https://github.com/fabulator/fitness-libraries/commit/ba8c543afaf1b9cc32dd8608ff9a5193d11184e3) Update dependency @types/luxon to v1.24.1
