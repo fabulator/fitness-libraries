@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [4.29.0] 2020-07-03
+### Changed
+- [6a913ca](https://github.com/fabulator/fitness-libraries/commit/6a913ca8d943bd98433737fed08d3bca3ea1b8ad) Update dependency garmin-api-handler to v3.15.0
+
 ## [4.28.0] 2020-07-02
 ### Changed
 - [2edb41c](https://github.com/fabulator/fitness-libraries/commit/2edb41cbbfe531f756f52c30d2700fbdc5dcf695) Update dependency storage-keeper to v3.5.0
