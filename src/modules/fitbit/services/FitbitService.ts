@@ -42,7 +42,7 @@ export default class FitbitService {
         return data;
     }
 
-    public async getActivity(id: number): Promise<Activity> {
+    public async getActivity(id: number) {
         return this.fitbitApi.getActivity(id);
     }
 
@@ -51,12 +51,12 @@ export default class FitbitService {
         return data;
     }
 
-    public async getActivities(filters: TYPES.ActivityFilters): Promise<Activity[]> {
+    public async getActivities(filters: TYPES.ActivityFilters) {
         const { activities } = await this.fitbitApi.getActivities(filters);
         return activities;
     }
 
-    public async createActivity(activity: Activity): Promise<Activity> {
+    public async createActivity(activity: Activity) {
         return this.fitbitApi.logActivity(activity);
     }
 
