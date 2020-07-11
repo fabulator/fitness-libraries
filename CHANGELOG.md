@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [5.0.0] 2020-07-11
+### Changed
+- [a2a5cc5](https://github.com/fabulator/fitness-libraries/commit/a2a5cc514e33217b89517bc0de2519cea86aba3a) Use fitness libraries as peer dependencies BREAKING
+
 ## [4.33.0] 2020-07-05
 ### Changed
 - [19d9bf6](https://github.com/fabulator/fitness-libraries/commit/19d9bf6ea112bb898e57921f4b538e19afe20e07) Update dependency garmin-api-handler to v3.17.0
