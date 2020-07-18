@@ -30,7 +30,7 @@ export default class StravaApiHandler extends Api {
 
         if (DateTime.local().toSeconds() >= token.expires_at) {
             const refreshedToken = await this.refreshToken(token.refresh_token);
-            this.storage.store(refreshedToken);
+            await this.storage.store(refreshedToken);
         }
 
         return super.request(...parameters);

@@ -33,7 +33,7 @@ export default class StravaService {
 
     public async authorize(code: string): Promise<{ access_token: string }> {
         const token = await this.api.requestAccessToken(code);
-        this.storage.store(token);
+        await this.storage.store(token);
         return token;
     }
 
@@ -84,7 +84,7 @@ export default class StravaService {
             time: Date;
         }[]
     > {
-        const points = await this.api.getStream(activity.getId() as number, [Stream.HEARTRATE, Stream.LATNG, Stream.CADENCE, Stream.TIME]);
+        const points = await this.api.getStream(activity.getId(), [Stream.HEARTRATE, Stream.LATNG, Stream.CADENCE, Stream.TIME]);
 
         return points.map((point) => {
             const { heartrate, time, cadence, latlng } = point;

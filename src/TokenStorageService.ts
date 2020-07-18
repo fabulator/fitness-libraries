@@ -10,7 +10,7 @@ export default class TokenStorageService<Token = string> {
     }
 
     public async get() {
-        return (this.storage.get(this.storageName) as unknown) as Token | null;
+        return (await this.storage.get(this.storageName)) as Token | null;
     }
 
     public async delete() {

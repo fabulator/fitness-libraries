@@ -4,9 +4,13 @@ import TokenStorageService from '../../../TokenStorageService';
 import { SYMBOLS } from '../constants';
 
 @injectable()
-class GarminStorageService extends TokenStorageService<any> {
-    public constructor(@inject(Storage) storage: Storage, @inject(SYMBOLS.env) @named(SYMBOLS.apiStorageName) storageName: string) {
-        super(storage, storageName);
+class GarminStorageService extends TokenStorageService<string> {
+    public constructor(
+        @inject(Storage) storage: Storage,
+        @inject(SYMBOLS.env) @named(SYMBOLS.apiStorageName) storageName: string,
+        @inject(SYMBOLS.env) @named(SYMBOLS.login) email: string,
+    ) {
+        super(storage, `${storageName}${email}`);
     }
 }
 
