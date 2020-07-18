@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [5.5.0] 2020-07-18
+### Changed
+- [2b9c948](https://github.com/fabulator/fitness-libraries/commit/2b9c948b22838f11c5db603df718318c9b0533c9) Update dependency endomondo-api-handler to v6.26.0
+
 ## [5.4.0] 2020-07-17
 ### Changed
 - [fc7df3e](https://github.com/fabulator/fitness-libraries/commit/fc7df3ec8c5fcd28d36cb6b5adf00a88fed4c32b) Update dependency storage-keeper to v3.6.0
