@@ -1,7 +1,8 @@
 import { inject, injectable, named } from 'inversify';
-import { Activity, Api, TYPES } from 'strava-api-handler';
-import StravaStorageService from './StravaStorageService';
+import { Activity, Api, ApiScope, Stream, WebApi } from 'strava-api-handler';
+import { ActivityFilters } from 'strava-api-handler/src/types/ActivityFilters';
 import { SYMBOLS } from '../constants';
+import StravaStorageService from './StravaStorageService';
 
 function waitForIt(waitingTime: number): Promise<void> {
     return new Promise((resolve) => {
@@ -14,16 +15,19 @@ export default class StravaService {
     public constructor(
         @inject(Api) protected api: Api,
         @inject(StravaStorageService) protected storage: StravaStorageService,
+        @inject(WebApi) protected webApi: WebApi,
         @inject(SYMBOLS.env) @named(SYMBOLS.returnUrl) protected returnUrl: string,
-    ) {
-    }
+    ) {}
 
     public getApi() {
         return this.api;
     }
 
-    public getLoginUrl(scopes: string[]) {
-        // @ts-ignore
+    public getWebApi() {
+        return this.webApi;
+    }
+
+    public getLoginUrl(scopes: ApiScope[]) {
         return this.api.getLoginUrl(this.returnUrl, scopes);
     }
 
@@ -37,7 +41,7 @@ export default class StravaService {
         return this.api.getActivity(id);
     }
 
-    public async getActivities(filters: TYPES.ActivityFilters = {}) {
+    public async getActivities(filters: ActivityFilters = {}) {
         return this.api.getActivities(filters);
     }
 
@@ -69,28 +73,21 @@ export default class StravaService {
         return uploadedActivity;
     }
 
-    public async getActivityPoint(activity: Activity<number>): Promise<{
-        lat: number,
-        lon: number,
-        time: Date,
-        cadence: number,
-        hr: number,
-    }[]> {
-        // @ts-ignore
-        const points = await this.api.getStream(activity.getId(), [
-            Api.STREAM.HEARTRATE,
-            Api.STREAM.LATNG,
-            Api.STREAM.CADENCE,
-            Api.STREAM.TIME,
-        ]);
+    public async getActivityPoint(
+        activity: Activity<number>,
+    ): Promise<
+        {
+            cadence: number;
+            hr: number;
+            lat: number;
+            lon: number;
+            time: Date;
+        }[]
+    > {
+        const points = await this.api.getStream(activity.getId() as number, [Stream.HEARTRATE, Stream.LATNG, Stream.CADENCE, Stream.TIME]);
 
-        return points.map((point: any) => {
-            const {
-                heartrate,
-                time,
-                cadence,
-                latlng,
-            } = point;
+        return points.map((point) => {
+            const { heartrate, time, cadence, latlng } = point;
 
             return {
                 lat: latlng[0],

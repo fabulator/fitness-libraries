@@ -1,9 +1,8 @@
-import { inject, injectable, named } from 'inversify';
 import { Api as EndomondoApi, EXCEPTIONS } from 'endomondo-api-handler';
-import EndomondoApiStorageService from '../storages/EndomondoApiStorageService';
+import { inject, injectable, named } from 'inversify';
+import { ArgumentsType } from '../../../../utils';
 import { SYMBOLS } from '../../constants';
-
-type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
+import EndomondoApiStorageService from '../storages/EndomondoApiStorageService';
 
 @injectable()
 class EndomondoApiHandler extends EndomondoApi {

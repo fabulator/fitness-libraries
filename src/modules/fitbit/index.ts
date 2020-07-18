@@ -1,17 +1,14 @@
-import { ContainerModule, interfaces } from 'inversify';
 import { Api as FitbitApi } from 'fitbit-api-handler';
-import { FitbitService, FitbitStorageService, FitbitApiHandler } from './services';
+import { ContainerModule, interfaces } from 'inversify';
+import { FitbitApiHandler, FitbitService, FitbitStorageService } from './services';
 
-export { FitbitService };
 export { SYMBOLS } from './constants';
+export { FitbitService };
 
-export default new ContainerModule(
-    (bind: interfaces.Bind) => {
-        bind(FitbitStorageService)
-            .toSelf();
+export default new ContainerModule((bind: interfaces.Bind) => {
+    bind(FitbitStorageService).toSelf();
 
-        bind(FitbitApi).to(FitbitApiHandler);
+    bind(FitbitApi).to(FitbitApiHandler);
 
-        bind(FitbitService).toSelf();
-    },
-);
+    bind(FitbitService).toSelf();
+});

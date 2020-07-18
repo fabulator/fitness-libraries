@@ -1,10 +1,9 @@
 import { inject, injectable, named } from 'inversify';
 import { DateTime } from 'luxon';
 import { Api } from 'strava-api-handler';
-import StravaStorageService from './StravaStorageService';
+import { ArgumentsType } from '../../../utils';
 import { SYMBOLS } from '../constants';
-
-type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
+import StravaStorageService from './StravaStorageService';
 
 @injectable()
 export default class StravaApiHandler extends Api {

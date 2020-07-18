@@ -1,10 +1,7 @@
 module.exports = {
-    extends: [
-        '@socifi',
-    ],
+    extends: ['fabulator'],
     rules: {
         'camelcase': 0,
-        'compat/compat': 0,
         '@typescript-eslint/camelcase': 0,
     },
 };

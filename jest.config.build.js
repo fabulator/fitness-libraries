@@ -1,5 +1,6 @@
 module.exports = {
-    ...require('@socifi/jest-config')('build'),
+    // eslint-disable-next-line global-require
+    ...require('jest-config-fabulator')('build'),
     transform: {
         '^.+\\.tsx?$': 'ts-jest',
     },

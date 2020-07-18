@@ -1,12 +1,10 @@
+import { Activity, GarminApi } from 'garmin-api-handler';
+import { ActivityFilters } from 'garmin-api-handler/dist/GarminApi';
 import { inject, injectable } from 'inversify';
-import { Activity, GarminApi, TYPES } from 'garmin-api-handler';
 
 @injectable()
 export default class GarminService {
-    public constructor(
-        @inject(GarminApi) protected api: GarminApi,
-    ) {
-    }
+    public constructor(@inject(GarminApi) protected api: GarminApi) {}
 
     public getApi() {
         return this.api;
@@ -16,7 +14,7 @@ export default class GarminService {
         return this.api.getActivity(id);
     }
 
-    public async getActivities(filters: TYPES.ActivityFilters = {}): Promise<Activity[]> {
+    public async getActivities(filters: ActivityFilters = {}): Promise<Activity[]> {
         return this.api.getActivities(filters);
     }
 

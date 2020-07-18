@@ -1,10 +1,9 @@
-import { inject, injectable, named } from 'inversify';
 import { Api as FitbitApi, FitbitApiException } from 'fitbit-api-handler';
+import { inject, injectable, named } from 'inversify';
 import { DateTime } from 'luxon';
-import FitbitStorageService from './FitbitStorageService';
+import { ArgumentsType } from '../../../utils';
 import { SYMBOLS } from '../constants';
-
-type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
+import FitbitStorageService from './FitbitStorageService';
 
 @injectable()
 export default class FitbitApiHandler extends FitbitApi {

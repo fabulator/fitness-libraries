@@ -1,9 +1,8 @@
+import { EXCEPTIONS, MobileApi } from 'endomondo-api-handler';
 import { inject, injectable, named } from 'inversify';
-import { MobileApi, EXCEPTIONS } from 'endomondo-api-handler';
-import EndomondoMobileApiStorageService from '../storages/EndomondoMobileApiStorageService';
+import { ArgumentsType } from '../../../../utils';
 import { SYMBOLS } from '../../constants';
-
-type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
+import EndomondoMobileApiStorageService from '../storages/EndomondoMobileApiStorageService';
 
 function reauth(): any {
     return (
@@ -14,11 +13,13 @@ function reauth(): any {
         const fn = descriptor.value;
         descriptor.value = async function (this: EndomondoMobileApiHandler, ...x) {
             try {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 return await fn.apply(this, x);
             } catch (exception) {
                 if (exception instanceof EXCEPTIONS.EndomondoAuthException) {
                     await this.login();
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-ignore
                     return fn.apply(this, x);
                 }

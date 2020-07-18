@@ -1,15 +1,16 @@
-import { GarminApi, GarminApiException } from 'garmin-api-handler';
 import { inject, injectable, named } from 'inversify';
+import { Api, DefaultApiException } from 'rest-api-handler';
+import { WebApi } from 'strava-api-handler';
 import { ArgumentsType } from '../../../utils';
 import { SYMBOLS } from '../constants';
-import GarminStorageService from './GarminStorageService';
+import StravaWebStorageService from './StravaWebStorageService';
 
 @injectable()
-class GarminHandler extends GarminApi {
+class StravaWebApiHandler extends WebApi {
     private init?: boolean;
 
     public constructor(
-        @inject(GarminStorageService) public storage: GarminStorageService,
+        @inject(StravaWebStorageService) public storage: StravaWebStorageService,
         @inject(SYMBOLS.env) @named(SYMBOLS.login) public email: string,
         @inject(SYMBOLS.env) @named(SYMBOLS.password) public password: string,
     ) {
@@ -32,18 +33,8 @@ class GarminHandler extends GarminApi {
         this.init = true;
     }
 
-    public async login(email: string = this.email, password: string = this.password) {
-        const response = await super.login(email, password);
-        await this.storage.store(response);
-        return response;
-    }
-
-    public async request(...parameters: ArgumentsType<typeof GarminApi.prototype.request>) {
-        if (
-            parameters[0].includes('sso/login') ||
-            parameters[0].includes('ticket') ||
-            parameters[0] === 'https://connect.garmin.com/modern/'
-        ) {
+    public async request(...parameters: ArgumentsType<typeof Api.prototype.request>) {
+        if (parameters[0].includes('login') || parameters[0].includes('session')) {
             return super.request(...parameters);
         }
 
@@ -56,13 +47,18 @@ class GarminHandler extends GarminApi {
         try {
             return await super.request(...parameters);
         } catch (exception) {
-            if (exception instanceof GarminApiException) {
+            if (exception instanceof DefaultApiException) {
                 await this.login();
                 return super.request(...parameters);
             }
             throw exception;
         }
     }
+
+    public async login(email: string = this.email, password: string = this.password) {
+        await super.login(email, password);
+        await this.storage.store(this.getSession());
+    }
 }
 
-export default GarminHandler;
+export default StravaWebApiHandler;

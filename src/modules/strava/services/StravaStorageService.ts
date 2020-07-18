@@ -5,10 +5,7 @@ import { SYMBOLS } from '../constants';
 
 @injectable()
 export default class StravaStorageService extends TokenStorageService<any> {
-    public constructor(
-        @inject(Storage) storage: Storage,
-        @inject(SYMBOLS.env) @named(SYMBOLS.apiStorageName) storageName: string,
-    ) {
+    public constructor(@inject(Storage) storage: Storage, @inject(SYMBOLS.env) @named(SYMBOLS.apiStorageName) storageName: string) {
         super(storage, storageName);
     }
 }

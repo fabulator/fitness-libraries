@@ -1,15 +1,10 @@
+import { Activity, Api as FitbitApi, ApiScope } from 'fitbit-api-handler';
+import { ApiActivityFilters } from 'fitbit-api-handler/src/types/api/index';
 import { inject, injectable, named } from 'inversify';
 import { DateTime } from 'luxon';
-import {
-    Api as FitbitApi,
-    SCOPES,
-    Activity,
-    TYPES,
-} from 'fitbit-api-handler';
-import FitbitStorageService from './FitbitStorageService';
+import { ArgumentsType } from '../../../utils';
 import { SYMBOLS } from '../constants';
-
-type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
+import FitbitStorageService from './FitbitStorageService';
 
 @injectable()
 export default class FitbitService {
@@ -23,18 +18,15 @@ export default class FitbitService {
         return this.fitbitApi;
     }
 
-    public getLoginUrl(): string {
-        return this.fitbitApi.getLoginUrl(this.returnUrl, [
-            SCOPES.ACTIVITY,
-            SCOPES.HEARTRATE,
-            SCOPES.LOCATION,
-            SCOPES.PROFILE,
-        ], { responseType: 'code' });
+    public getLoginUrl(
+        scopes: ApiScope[] = [ApiScope.ACTIVITY, ApiScope.HEARTRATE, ApiScope.LOCATION, ApiScope.PROFILE, ApiScope.SLEEP],
+    ): string {
+        return this.fitbitApi.getLoginUrl(this.returnUrl, scopes, { responseType: 'code' });
     }
 
     public async authorize(code: string) {
         const token = await this.fitbitApi.requestAccessToken(code, this.returnUrl);
-        this.storage.storeToken(token);
+        await this.storage.storeToken(token);
     }
 
     public async getProfile(): Promise<Record<string, any>> {
@@ -51,7 +43,7 @@ export default class FitbitService {
         return data;
     }
 
-    public async getActivities(filters: TYPES.ActivityFilters) {
+    public async getActivities(filters: ApiActivityFilters) {
         const { activities } = await this.fitbitApi.getActivities(filters);
         return activities;
     }

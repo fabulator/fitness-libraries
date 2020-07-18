@@ -4,10 +4,8 @@ import TokenStorageService from '../../../TokenStorageService';
 import { SYMBOLS } from '../constants';
 
 @injectable()
-class GarminStorageService extends TokenStorageService<any> {
-    public constructor(@inject(Storage) storage: Storage, @inject(SYMBOLS.env) @named(SYMBOLS.apiStorageName) storageName: string) {
+export default class StravaWebStorageService extends TokenStorageService<any> {
+    public constructor(@inject(Storage) storage: Storage, @inject(SYMBOLS.env) @named(SYMBOLS.webApiStorageName) storageName: string) {
         super(storage, storageName);
     }
 }
-
-export default GarminStorageService;

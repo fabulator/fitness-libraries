@@ -1,16 +1,11 @@
+import { Api as EndomondoApi, MobileApi, Workout } from 'endomondo-api-handler';
+import { WorkoutFilters } from 'endomondo-api-handler/src/types/WorkoutFilters';
 import { inject, injectable } from 'inversify';
-import {
-    Api as EndomondoApi, MobileApi, Workout, TYPES,
-} from 'endomondo-api-handler';
-
-type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;
+import { ArgumentsType } from '../../../utils';
 
 @injectable()
 class EndomondoService {
-    public constructor(
-        @inject(EndomondoApi) public api: EndomondoApi,
-        @inject(MobileApi) public mobileApi: MobileApi,
-    ) {}
+    public constructor(@inject(EndomondoApi) public api: EndomondoApi, @inject(MobileApi) public mobileApi: MobileApi) {}
 
     public getApi() {
         return this.api;
@@ -24,7 +19,7 @@ class EndomondoService {
         return this.api.getWorkout(id);
     }
 
-    public async getWorkouts(filter: TYPES.WorkoutFilters) {
+    public async getWorkouts(filter: WorkoutFilters) {
         const { workouts } = await this.api.getWorkouts(filter);
         return workouts;
     }
