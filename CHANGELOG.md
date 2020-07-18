@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.6.1 (2020-07-18)
+### Fixed
+- [c90db62](https://github.com/fabulator/fitness-libraries/commit/c90db62b7908fcfe22f1055951db3463ea68bea8) Handling token storage
+
 ## v5.6.0 (2020-07-18)
 ### Changed
 - [61e2853](https://github.com/fabulator/fitness-libraries/commit/61e2853d71fd24276406a8e391cde976d173ed4a) Update fitness libraries
