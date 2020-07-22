@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.7.0 (2020-07-22)
+### Changed
+- [f6cc2a8](https://github.com/fabulator/fitness-libraries/commit/f6cc2a8fd83087d431013ed32f09f4a7a5bf09c5) Update dependency @types/luxon to v1.24.2
+
 ## v5.6.1 (2020-07-18)
 ### Fixed
 - [c90db62](https://github.com/fabulator/fitness-libraries/commit/c90db62b7908fcfe22f1055951db3463ea68bea8) Handling token storage
