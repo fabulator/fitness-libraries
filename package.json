@@ -39,12 +39,12 @@
     "reflect-metadata": "^0.1.13",
     "rest-api-handler": "^2.20.0",
     "storage-keeper": "^3.6.0",
-    "unzipper": "^0.10.11"
+    "unzipper": "^0.10.11",
+    "cross-fetch": "^3.0.5"
   },
   "devDependencies": {
     "babel-config-fabulator": "^1.0.0",
     "commitlint-config-fabulator": "^1.0.0",
-    "cross-fetch": "^3.0.5",
     "endomondo-api-handler": "^7.3.0",
     "eslint-config-fabulator": "^1.0.2",
     "fitbit-api-handler": "^6.4.0",
