@@ -34,13 +34,13 @@
   "dependencies": {
     "@types/luxon": "^1.24.3",
     "@types/unzipper": "^0.10.3",
+    "cross-fetch": "^3.0.5",
     "inversify": "^5.0.1",
     "luxon": "^1.24.1",
     "reflect-metadata": "^0.1.13",
     "rest-api-handler": "^2.20.0",
     "storage-keeper": "^3.6.0",
-    "unzipper": "^0.10.11",
-    "cross-fetch": "^3.0.5"
+    "unzipper": "^0.10.11"
   },
   "devDependencies": {
     "babel-config-fabulator": "^1.0.0",
