@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.10.0 (2020-08-09)
+### Fixed
+- [221f882](https://github.com/fabulator/fitness-libraries/commit/221f8824bf82976bc1f77ce5d44765d36df9d88c) json sorting
+- [a20edc4](https://github.com/fabulator/fitness-libraries/commit/a20edc44740e47258dc8946dd75804465d3a42dc) Library dependency
+
+### Added
+- [ecbe90b](https://github.com/fabulator/fitness-libraries/commit/ecbe90bd152c0ee9bbd36be2362396aef2daedd3) Support for fit files
+
 ## v5.9.0 (2020-07-25)
 ### Changed
 - [bd007ab](https://github.com/fabulator/fitness-libraries/commit/bd007ab5161bde5aaa99ba04cb63f10829b2fc3f) Update dependency @types/luxon to v1.24.3
