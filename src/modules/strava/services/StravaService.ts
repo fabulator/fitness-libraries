@@ -57,12 +57,12 @@ export default class StravaService {
         return this.getActivityFromUpload(uploadId);
     }
 
-    public async createActivity(activity: Activity, gpx?: string): Promise<Activity<number>> {
-        if (!gpx) {
+    public async createActivity(activity: Activity, type?: 'gpx' | 'fit', content?: string | Buffer): Promise<Activity<number>> {
+        if (!type || !content) {
             return this.api.createActivity(activity);
         }
 
-        const upload = await this.api.uploadActivity(activity, gpx, Math.random());
+        const upload = await this.api.uploadActivity(activity, content, Math.random(), type);
         const activityId = await this.getActivityFromUpload(upload.id);
 
         const uploadedActivity = activity.setId(activityId);
@@ -73,28 +73,27 @@ export default class StravaService {
         return uploadedActivity;
     }
 
-    public async getActivityPoint(
-        activity: Activity<number>,
-    ): Promise<
-        {
-            cadence: number;
-            hr: number;
-            lat: number;
-            lon: number;
-            time: Date;
-        }[]
-    > {
-        const points = await this.api.getStream(activity.getId(), [Stream.HEARTRATE, Stream.LATNG, Stream.CADENCE, Stream.TIME]);
+    public async getActivityPoint(activity: Activity<number>) {
+        const points = await this.api.getStream(activity.getId(), [
+            Stream.HEARTRATE,
+            Stream.LATNG,
+            Stream.CADENCE,
+            Stream.TIME,
+            Stream.ALTITUDE,
+            Stream.TEMP,
+        ]);
 
         return points.map((point) => {
-            const { heartrate, time, cadence, latlng } = point;
+            const [lat, lon] = point[Stream.LATNG];
 
             return {
-                lat: latlng[0],
-                lon: latlng[1],
-                time: activity.getStart().plus({ seconds: time }).toJSDate(),
-                cadence,
-                hr: heartrate,
+                lat,
+                lon,
+                time: activity.getStart().plus({ seconds: point[Stream.TIME] }).toJSDate(),
+                [Stream.CADENCE]: point[Stream.CADENCE],
+                [Stream.HEARTRATE]: point[Stream.HEARTRATE],
+                [Stream.TEMP]: point[Stream.TEMP],
+                [Stream.ALTITUDE]: point[Stream.ALTITUDE],
             };
         });
     }

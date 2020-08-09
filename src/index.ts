@@ -1,3 +1,4 @@
+import 'cross-fetch/polyfill';
 import 'reflect-metadata';
 import * as ENDOMONDO from './modules/endomondo';
 import * as FITBIT from './modules/fitbit';

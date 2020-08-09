@@ -3,7 +3,7 @@ import { Storage } from 'storage-keeper';
 
 @injectable()
 export default class TokenStorageService<Token = string> {
-    public constructor(@inject(Storage) private storage: Storage, private storageName: string) {}
+    public constructor(@inject(Storage) private storage: Storage, protected storageName: string) {}
 
     public async store(token: Token) {
         return this.storage.set(this.storageName, token);
