@@ -1,6 +1,22 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.9.0 (2020-07-25)
+### Changed
+- [bd007ab](https://github.com/fabulator/fitness-libraries/commit/bd007ab5161bde5aaa99ba04cb63f10829b2fc3f) Update dependency @types/luxon to v1.24.3
+
+## v5.8.0 (2020-07-24)
+### Changed
+- [27c418d](https://github.com/fabulator/fitness-libraries/commit/27c418d1754b6443d83a973bd80a696e568360a8) Update dependency fitbit-api-handler to v6.1.0
+
+## v5.7.0 (2020-07-22)
+### Changed
+- [f6cc2a8](https://github.com/fabulator/fitness-libraries/commit/f6cc2a8fd83087d431013ed32f09f4a7a5bf09c5) Update dependency @types/luxon to v1.24.2
+
+## v5.6.1 (2020-07-18)
+### Fixed
+- [c90db62](https://github.com/fabulator/fitness-libraries/commit/c90db62b7908fcfe22f1055951db3463ea68bea8) Handling token storage
+
 ## v5.6.0 (2020-07-18)
 ### Changed
 - [61e2853](https://github.com/fabulator/fitness-libraries/commit/61e2853d71fd24276406a8e391cde976d173ed4a) Update fitness libraries
