@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.10.1 (2020-08-23)
+### Fixed
+- [e9b7486](https://github.com/fabulator/fitness-libraries/commit/e9b7486799fd2a9cabfcefd5c42061f71ea246e8) Fitbit storage binding
+- [e9b7486](https://github.com/fabulator/fitness-libraries/commit/e9b7486799fd2a9cabfcefd5c42061f71ea246e8) downloading fit gile
+
 ## v5.10.0 (2020-08-09)
 ### Fixed
 - [221f882](https://github.com/fabulator/fitness-libraries/commit/221f8824bf82976bc1f77ce5d44765d36df9d88c) json sorting
