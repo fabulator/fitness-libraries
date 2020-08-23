@@ -5,7 +5,7 @@ import TokenStorageService from '../../../TokenStorageService';
 
 @injectable()
 export default class FitbitStorageService extends TokenStorageService<ApiToken> {
-    public constructor(@inject(Storage) storage: Storage, protected storageName: string) {
+    public constructor(@inject(Storage) storage: Storage) {
         super(storage, 'FITBIT_TOKEN');
     }
 }

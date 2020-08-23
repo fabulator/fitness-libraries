@@ -1,4 +1,3 @@
-import fs from 'fs';
 import { Activity, GarminApi } from 'garmin-api-handler';
 import { inject, injectable } from 'inversify';
 import unzipper from 'unzipper';
@@ -13,21 +12,9 @@ export default class GarminService {
 
     public async getFitFile(activityId: number) {
         const exportFile = await this.api.getActivityFile(activityId);
-        const zipFile = `./${activityId}.zip`;
-        fs.writeFileSync(zipFile, Buffer.from(await exportFile.arrayBuffer()));
-        const zip = fs.createReadStream(zipFile).pipe(unzipper.Parse({ forceStream: true }));
-        // eslint-disable-next-line no-restricted-syntax
-        for await (const entry of zip) {
-            if (entry.path === `${activityId}.fit`) {
-                entry.pipe(fs.createWriteStream(`./${activityId}.fit`));
-            } else {
-                entry.autodrain();
-            }
-        }
-        const buffer = fs.readFileSync(`${activityId}.fit`);
-        fs.unlinkSync(zipFile);
-        fs.unlinkSync(`${activityId}.fit`);
-        return buffer;
+        const buffer = Buffer.from(await exportFile.arrayBuffer());
+        const directory = await unzipper.Open.buffer(buffer);
+        return directory.files[0].buffer();
     }
 
     public async createActivity(activity: Activity): Promise<Activity<number>>;
