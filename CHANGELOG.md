@@ -1,6 +1,20 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.11.0 (2021-07-18)
+### Fixed
+- [3c6935d](https://github.com/fabulator/fitness-libraries/commit/3c6935d42626595b7b7c0ad22c897b14ca68d2e1) Tests
+- [24ff1ea](https://github.com/fabulator/fitness-libraries/commit/24ff1eaf4df3dc63011297e015994488dd2c24cc) Remove endomondo export
+- [d5c467a](https://github.com/fabulator/fitness-libraries/commit/d5c467a995441ea46277f10b302f985c087f7db2) Update lock for security updated (#263)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+- [7afcc4e](https://github.com/fabulator/fitness-libraries/commit/7afcc4ecad8facf00acf7785bf13e9545ba12d1a) Security lock update (#262)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
+### Changed
+- [8a0c317](https://github.com/fabulator/fitness-libraries/commit/8a0c317fcb930fdee13eba1356bd2bdf3533bb26) Remove endomondo
+
 ## v5.10.1 (2020-08-23)
 ### Fixed
 - [e9b7486](https://github.com/fabulator/fitness-libraries/commit/e9b7486799fd2a9cabfcefd5c42061f71ea246e8) Fitbit storage binding
