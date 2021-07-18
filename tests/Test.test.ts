@@ -1,7 +1,7 @@
-import { ENDOMONDO } from '../src';
+import { FITBIT } from '../src';
 
 describe('Test', () => {
     it('exists', () => {
-        expect(ENDOMONDO).toBeDefined();
+        expect(FITBIT).toBeDefined();
     });
 });
