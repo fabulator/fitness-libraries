@@ -13,6 +13,9 @@ class GarminHandler extends GarminApi {
         @inject(SYMBOLS.env) @named(SYMBOLS.password) public password: string,
     ) {
         super();
+        this.setSession(email);
+
+        this.addCookies({ __cflb: password });
     }
 
     /* private async sessionIni() {
