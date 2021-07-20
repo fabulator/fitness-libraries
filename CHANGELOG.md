@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.12.0 (2021-07-20)
+### Changed
+- [4d5f9fd](https://github.com/fabulator/fitness-libraries/commit/4d5f9fd16d8898b67c2198d4c1bd524432f712f7) Disable login for garmin
+
 ## v5.11.3 (2021-07-19)
 ### Fixed
 - [2f94124](https://github.com/fabulator/fitness-libraries/commit/2f941243f1dc3924a09fefee5e39b5772948debb) Update lock for security updated
