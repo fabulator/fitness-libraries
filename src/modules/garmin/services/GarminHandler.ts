@@ -1,6 +1,5 @@
-import { GarminApi, GarminApiException } from 'garmin-api-handler';
+import { GarminApi } from 'garmin-api-handler';
 import { inject, injectable, named } from 'inversify';
-import { ArgumentsType } from '../../../utils';
 import { SYMBOLS } from '../constants';
 import GarminStorageService from './GarminStorageService';
 
@@ -16,7 +15,7 @@ class GarminHandler extends GarminApi {
         super();
     }
 
-    private async sessionIni() {
+    /* private async sessionIni() {
         if (this.init) {
             return;
         }
@@ -62,7 +61,7 @@ class GarminHandler extends GarminApi {
             }
             throw exception;
         }
-    }
+    } */
 }
 
 export default GarminHandler;
