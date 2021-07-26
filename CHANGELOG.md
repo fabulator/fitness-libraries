@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.12.3 (2021-07-26)
+### Fixed
+- [ce15d69](https://github.com/fabulator/fitness-libraries/commit/ce15d697653b563e65dbe19e8c45527cc6dd4822) Update lock for security updated
+
 ## v5.12.2 (2021-07-26)
 ### Fixed
 - [2182b22](https://github.com/fabulator/fitness-libraries/commit/2182b2293410ce3230c13fd1d40bc1478aa5b053) Update lock for security updated
