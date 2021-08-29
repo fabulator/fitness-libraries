@@ -1,7 +1,8 @@
-import { GarminApi } from 'garmin-api-handler';
+import { GarminApi, GarminApiException } from 'garmin-api-handler';
 import { inject, injectable, named } from 'inversify';
 import { SYMBOLS } from '../constants';
 import GarminStorageService from './GarminStorageService';
+import { ArgumentsType } from '../../../utils';
 
 @injectable()
 class GarminHandler extends GarminApi {
@@ -13,12 +14,9 @@ class GarminHandler extends GarminApi {
         @inject(SYMBOLS.env) @named(SYMBOLS.password) public password: string,
     ) {
         super();
-        this.setSession(email);
-
-        this.addCookies({ __cflb: password });
     }
 
-    /* private async sessionIni() {
+    private async sessionIni() {
         if (this.init) {
             return;
         }
@@ -64,7 +62,7 @@ class GarminHandler extends GarminApi {
             }
             throw exception;
         }
-    } */
+    }
 }
 
 export default GarminHandler;
