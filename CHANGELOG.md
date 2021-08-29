@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.12.5 (2021-08-29)
+### Other
+- [1516532](https://github.com/fabulator/fitness-libraries/commit/151653247d4a0d6fdebb686be673142cf1a31916) WIP
+
+### Fixed
+- [ad54fcf](https://github.com/fabulator/fitness-libraries/commit/ad54fcfbe2ed32f16eb0754e55f213a6bddf89b4) garmin dependency
+
 ## v5.12.4 (2021-08-02)
 ### Fixed
 - [0eb46ba](https://github.com/fabulator/fitness-libraries/commit/0eb46ba3780df21f1da1cb3ad02e311b286539e2) Update lock for security updated
