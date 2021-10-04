@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v5.13.1 (2021-10-04)
+### Fixed
+- [83d935b](https://github.com/fabulator/fitness-libraries/commit/83d935b54673ac198a0c12e7602a68f1bfc4aeb2) exported values
+
 ## v5.13.0 (2021-09-30)
 ### Changed
 - [bbd9c33](https://github.com/fabulator/fitness-libraries/commit/bbd9c33bb0d6f7b6acdba3e7fda1e9c4e18bb900) Update dependencies
