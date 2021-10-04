@@ -13,4 +13,4 @@ export default new ContainerModule((bind: interfaces.Bind) => {
     bind(GarminService).toSelf();
 });
 
-export { GarminService, SYMBOLS };
+export { GarminService, SYMBOLS, GarminStorageService, GarminHandler };
