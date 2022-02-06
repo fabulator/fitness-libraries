@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v6.0.0 (2022-02-06)
+### Changed
+- [752c15f](https://github.com/fabulator/fitness-libraries/commit/752c15f43a0535c87540ec29c9ea59774ab945c9) Update dependency inversify to v6 BREAKING (#298)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
 ## v5.13.1 (2021-10-04)
 ### Fixed
 - [83d935b](https://github.com/fabulator/fitness-libraries/commit/83d935b54673ac198a0c12e7602a68f1bfc4aeb2) exported values

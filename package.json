@@ -1,6 +1,6 @@
 {
   "name": "fitness-libraries",
-  "version": "5.13.1",
+  "version": "6.0.0",
   "description": "Fitness libraries as inversify modules.",
   "keywords": [
     "personal",
