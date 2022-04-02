@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v7.1.0 (2022-04-02)
+### Changed
+- [dea54b4](https://github.com/fabulator/fitness-libraries/commit/dea54b4579fe9fed10d56a6310748bdc9ec89fc8) Bump dependencies
+
 ## v7.0.0 (2022-04-02)
 ### Changed
 - [d6a9485](https://github.com/fabulator/fitness-libraries/commit/d6a94851b79f7f48dd19153d45cff087afc15de3) Update dependency strava-api-handler to v6 BREAKING (#300)
