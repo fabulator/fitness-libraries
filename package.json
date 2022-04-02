@@ -47,7 +47,7 @@
     "commitlint-config-fabulator": "^3.0.0",
     "eslint-config-fabulator": "^1.2.3",
     "fitbit-api-handler": "^7.1.0",
-    "garmin-api-handler": "^5.0.15",
+    "garmin-api-handler": "^6.0.15",
     "jest-config-fabulator": "^1.1.0",
     "semantic-release-config-fabulator": "^2.6.2",
     "strava-api-handler": "^6.0.0",
@@ -55,7 +55,7 @@
   },
   "peerDependencies": {
     "fitbit-api-handler": "^7.1.0",
-    "garmin-api-handler": "^5.0.15",
+    "garmin-api-handler": "^6.0.15",
     "strava-api-handler": "^6.0.0"
   }
 }
