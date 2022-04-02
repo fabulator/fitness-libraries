@@ -50,12 +50,12 @@
     "garmin-api-handler": "^5.0.15",
     "jest-config-fabulator": "^1.1.0",
     "semantic-release-config-fabulator": "^2.6.2",
-    "strava-api-handler": "^5.0.5",
+    "strava-api-handler": "^6.0.0",
     "ts-jest": "^27.0.5"
   },
   "peerDependencies": {
     "fitbit-api-handler": "^7.1.0",
     "garmin-api-handler": "^5.0.15",
-    "strava-api-handler": "^5.0.5"
+    "strava-api-handler": "^6.0.0"
   }
 }
