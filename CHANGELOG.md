@@ -1,6 +1,21 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v7.0.0 (2022-04-02)
+### Changed
+- [d6a9485](https://github.com/fabulator/fitness-libraries/commit/d6a94851b79f7f48dd19153d45cff087afc15de3) Update dependency strava-api-handler to v6 BREAKING (#300)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+- [d27d7ea](https://github.com/fabulator/fitness-libraries/commit/d27d7eab3e17d6adce9286a4c05c6ccee56cd0d9) Update actions/checkout action to v3 (#303)  
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+- [9d41095](https://github.com/fabulator/fitness-libraries/commit/9d410954d4cc1eca21cce83f59cd39de7ccf9663) Update actions/setup-node action to v3 (#302)  
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+- [3b36832](https://github.com/fabulator/fitness-libraries/commit/3b3683217873ed41783273b7d54a44cb4a738e84) Update dev dependency commitlint-config-fabulator to v3  (#299)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
 ## v6.0.0 (2022-02-06)
 ### Changed
 - [752c15f](https://github.com/fabulator/fitness-libraries/commit/752c15f43a0535c87540ec29c9ea59774ab945c9) Update dependency inversify to v6 BREAKING (#298)
