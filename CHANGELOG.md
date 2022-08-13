@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v8.0.0 (2022-08-13)
+### Changed
+- [e2c11b9](https://github.com/fabulator/fitness-libraries/commit/e2c11b9e2f24b7e7f5c145931970f1938cc61a09) Update dependency luxon to v3 BREAKING (#321)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+- [42159de](https://github.com/fabulator/fitness-libraries/commit/42159def2bf87e561e51de17625b72f2e5eaa292) Update dev dependency ts-jest to v28  (#308)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v7.1.0 (2022-04-02)
 ### Changed
 - [dea54b4](https://github.com/fabulator/fitness-libraries/commit/dea54b4579fe9fed10d56a6310748bdc9ec89fc8) Bump dependencies
