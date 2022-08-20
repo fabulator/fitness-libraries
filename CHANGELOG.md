@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v9.0.0 (2022-08-20)
+### Changed
+- [229b96b](https://github.com/fabulator/fitness-libraries/commit/229b96b1605cff10c7b4e1cb81dd580cb7f37bd6) Update dependency strava-api-handler to v9 BREAKING (#330)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
 ## v8.0.0 (2022-08-13)
 ### Changed
 - [e2c11b9](https://github.com/fabulator/fitness-libraries/commit/e2c11b9e2f24b7e7f5c145931970f1938cc61a09) Update dependency luxon to v3 BREAKING (#321)
