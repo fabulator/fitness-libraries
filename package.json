@@ -45,7 +45,7 @@
   "devDependencies": {
     "babel-config-fabulator": "^1.4.23",
     "commitlint-config-fabulator": "^5.0.0",
-    "eslint-config-fabulator": "^1.5.0",
+    "eslint-config-fabulator": "^2.3.0",
     "fitbit-api-handler": "^8.0.0",
     "garmin-api-handler": "^7.0.0",
     "jest-config-fabulator": "^1.2.0",
